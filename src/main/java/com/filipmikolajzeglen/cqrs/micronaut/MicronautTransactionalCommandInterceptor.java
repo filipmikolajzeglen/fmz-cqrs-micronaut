@@ -6,6 +6,10 @@ import com.filipmikolajzeglen.cqrs.core.TransactionalCommandInterceptor;
 import io.micronaut.transaction.annotation.Transactional;
 import jakarta.inject.Singleton;
 
+/**
+ * Transactional command interceptor for Micronaut.
+ * Marks command handling as transactional using Micronaut's @Transactional support.
+ */
 @Singleton
 public class MicronautTransactionalCommandInterceptor extends TransactionalCommandInterceptor
 {

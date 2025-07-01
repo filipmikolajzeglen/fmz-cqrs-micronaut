@@ -7,6 +7,10 @@ import com.filipmikolajzeglen.cqrs.core.TransactionalQueryInterceptor;
 import io.micronaut.transaction.annotation.Transactional;
 import jakarta.inject.Singleton;
 
+/**
+ * Transactional query interceptor for Micronaut.
+ * Marks query handling as read-only transactional using Micronaut's @Transactional(readOnly = true) support.
+ */
 @Singleton
 public class MicronautTransactionalQueryInterceptor extends TransactionalQueryInterceptor
 {

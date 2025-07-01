@@ -13,6 +13,11 @@ import io.micronaut.context.annotation.Factory;
 import jakarta.inject.Singleton;
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * Micronaut configuration for FMZ CQRS.
+ * Registers the Dispatcher bean with support for CommandHandler and QueryHandler,
+ * as well as logging and transactional interceptors.
+ */
 @Slf4j
 @Factory
 public class MicronautDispatcherConfiguration
