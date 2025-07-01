@@ -1,0 +1,130 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+   <modelVersion>4.0.0</modelVersion>
+
+   <parent>
+      <groupId>com.filipmikolajzeglen</groupId>
+      <artifactId>fmz-maven-common-parent</artifactId>
+      <version>1.0.2</version>
+   </parent>
+
+   <groupId>com.filipmikolajzeglen.cqrs</groupId>
+   <artifactId>fmz-cqrs-micronaut</artifactId>
+   <version>1.0.0-SNAPSHOT</version>
+
+   <name>FMZ - CQRS - Micronaut</name>
+   <url>https://github.com/filipmikolajzeglen</url>
+   <inceptionYear>2025</inceptionYear>
+   <licenses>
+      <license>
+         <name>Apache 2.0</name>
+         <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      </license>
+   </licenses>
+   <developers>
+      <developer>
+         <id>FMZ</id>
+         <name>Filip Mikołaj Żegleń</name>
+         <email>filipmikolajzeglen@gmail.com</email>
+         <roles>
+            <role>Developer</role>
+         </roles>
+      </developer>
+   </developers>
+   <scm>
+      <connection>scm:git:https://github.com/filipmikolajzeglen/fmz-cqrs-micronaut.git</connection>
+      <developerConnection>scm:git:git@github.com:filipmikolajzeglen/fmz-cqrs-micronaut.git</developerConnection>
+      <tag>HEAD</tag>
+      <url>https://github.com/filipmikolajzeglen/fmz-cqrs-micronaut</url>
+   </scm>
+
+   <properties>
+      <jdk.version>21</jdk.version>
+      <release.version>21</release.version>
+      <micronaut.version>4.9.0</micronaut.version>
+   </properties>
+
+   <dependencyManagement>
+      <dependencies>
+         <dependency>
+            <groupId>io.micronaut.platform</groupId>
+            <artifactId>micronaut-parent</artifactId>
+            <version>${micronaut.version}</version>
+            <type>pom</type>
+            <scope>import</scope>
+         </dependency>
+      </dependencies>
+   </dependencyManagement>
+
+   <dependencies>
+      <dependency>
+         <groupId>com.filipmikolajzeglen.cqrs</groupId>
+         <artifactId>fmz-cqrs-core</artifactId>
+         <version>1.0.0-SNAPSHOT</version>
+      </dependency>
+
+      <dependency>
+         <groupId>io.micronaut.data</groupId>
+         <artifactId>micronaut-data-tx</artifactId>
+         <scope>compile</scope>
+      </dependency>
+      <dependency>
+         <groupId>io.micronaut</groupId>
+         <artifactId>micronaut-http-server-netty</artifactId>
+         <scope>compile</scope>
+      </dependency>
+      <dependency>
+         <groupId>io.micronaut.serde</groupId>
+         <artifactId>micronaut-serde-jackson</artifactId>
+         <scope>compile</scope>
+      </dependency>
+      <dependency>
+         <groupId>ch.qos.logback</groupId>
+         <artifactId>logback-classic</artifactId>
+         <scope>runtime</scope>
+      </dependency>
+      <dependency>
+         <groupId>io.micronaut</groupId>
+         <artifactId>micronaut-http-client</artifactId>
+         <scope>test</scope>
+      </dependency>
+      <dependency>
+         <groupId>io.micronaut</groupId>
+         <artifactId>micronaut-inject-groovy</artifactId>
+         <scope>test</scope>
+      </dependency>
+      <dependency>
+         <groupId>io.micronaut.test</groupId>
+         <artifactId>micronaut-test-spock</artifactId>
+         <scope>test</scope>
+      </dependency>
+      <dependency>
+         <groupId>org.spockframework</groupId>
+         <artifactId>spock-core</artifactId>
+         <scope>test</scope>
+         <exclusions>
+            <exclusion>
+               <groupId>org.apache.groovy</groupId>
+               <artifactId>groovy-all</artifactId>
+            </exclusion>
+         </exclusions>
+      </dependency>
+   </dependencies>
+
+   <build>
+      <plugins>
+         <plugin>
+            <groupId>io.micronaut.maven</groupId>
+            <artifactId>micronaut-maven-plugin</artifactId>
+            <version>${micronaut.version}</version>
+            <configuration>
+               <configFile>aot-${packaging}.properties</configFile>
+            </configuration>
+         </plugin>
+         <plugin>
+            <groupId>org.codehaus.gmavenplus</groupId>
+            <artifactId>gmavenplus-plugin</artifactId>
+         </plugin>
+      </plugins>
+   </build>
+</project>
