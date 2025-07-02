@@ -22,7 +22,7 @@ import io.micronaut.context.annotation.Import;
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
-@Import(classes = MicronautDispatcherConfiguration.class)
+@Import(classes = {MicronautDispatcherConfiguration.class, MicronautPersistenceModuleConfiguration.class})
 public @interface EnableCqrs
 {
 }

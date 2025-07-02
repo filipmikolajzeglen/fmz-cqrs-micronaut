@@ -41,7 +41,8 @@
    <properties>
       <jdk.version>21</jdk.version>
       <release.version>21</release.version>
-      <micronaut.version>4.9.0</micronaut.version>
+      <version.micronaut>4.9.0</version.micronaut>
+      <version.fmz-cqrs>1.0.0-SNAPSHOT</version.fmz-cqrs>
    </properties>
 
    <dependencyManagement>
@@ -49,7 +50,7 @@
          <dependency>
             <groupId>io.micronaut.platform</groupId>
             <artifactId>micronaut-parent</artifactId>
-            <version>${micronaut.version}</version>
+            <version>${version.micronaut}</version>
             <type>pom</type>
             <scope>import</scope>
          </dependency>
@@ -60,7 +61,19 @@
       <dependency>
          <groupId>com.filipmikolajzeglen.cqrs</groupId>
          <artifactId>fmz-cqrs-core</artifactId>
-         <version>1.0.0-SNAPSHOT</version>
+         <version>${version.fmz-cqrs}</version>
+      </dependency>
+      <dependency>
+         <groupId>com.filipmikolajzeglen.cqrs</groupId>
+         <artifactId>fmz-cqrs-persistence</artifactId>
+         <version>${version.fmz-cqrs}</version>
+      </dependency>
+
+      <dependency>
+         <groupId>jakarta.persistence</groupId>
+         <artifactId>jakarta.persistence-api</artifactId>
+         <version>3.2.0</version>
+         <optional>true</optional>
       </dependency>
 
       <dependency>
@@ -116,7 +129,7 @@
          <plugin>
             <groupId>io.micronaut.maven</groupId>
             <artifactId>micronaut-maven-plugin</artifactId>
-            <version>${micronaut.version}</version>
+            <version>${version.micronaut}</version>
             <configuration>
                <configFile>aot-${packaging}.properties</configFile>
             </configuration>
