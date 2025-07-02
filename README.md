@@ -2,6 +2,9 @@
 
 The `fmz-cqrs-micronaut` library provides seamless integration of the CQRS (Command Query Responsibility Segregation) pattern with Micronaut applications.
 
+> **Note:**  
+> This version is published as **unstable** because, despite no related code changes, one bean (`Dispatcher`) stopped appearing in tests. This is likely a problem with the test configuration, not the production code.
+
 ## Features
 
 - Automatic registration of a Dispatcher supporting CommandHandler and QueryHandler
@@ -16,7 +19,7 @@ Add the dependency to your `pom.xml`:
 <dependency>
   <groupId>com.filipmikolajzeglen.cqrs</groupId>
   <artifactId>fmz-cqrs-micronaut</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.0-UNSTABLE</version>
 </dependency>
 ```
 
