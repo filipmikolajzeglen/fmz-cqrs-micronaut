@@ -11,7 +11,7 @@
 
    <groupId>com.filipmikolajzeglen.cqrs</groupId>
    <artifactId>fmz-cqrs-micronaut</artifactId>
-   <version>1.0.1</version>
+   <version>1.0.2-SNAPSHOT</version>
 
    <name>FMZ - CQRS - Micronaut</name>
    <url>https://github.com/filipmikolajzeglen</url>

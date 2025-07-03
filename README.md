@@ -19,7 +19,7 @@ Add the dependency to your `pom.xml`:
 <dependency>
   <groupId>com.filipmikolajzeglen.cqrs</groupId>
   <artifactId>fmz-cqrs-micronaut</artifactId>
-  <version>1.0.0-UNSTABLE</version>
+  <version>1.0.1-UNSTABLE</version>
 </dependency>
 ```
 
