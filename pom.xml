@@ -11,7 +11,7 @@
 
    <groupId>com.filipmikolajzeglen.cqrs</groupId>
    <artifactId>fmz-cqrs-micronaut</artifactId>
-   <version>1.0.0-SNAPSHOT</version>
+   <version>1.0.1</version>
 
    <name>FMZ - CQRS - Micronaut</name>
    <url>https://github.com/filipmikolajzeglen</url>
@@ -43,7 +43,6 @@
       <jdk.version>21</jdk.version>
       <release.version>21</release.version>
       <version.micronaut>4.9.0</version.micronaut>
-      <version.fmz-cqrs>1.0.0</version.fmz-cqrs>
    </properties>
 
    <dependencyManagement>
@@ -62,12 +61,12 @@
       <dependency>
          <groupId>com.filipmikolajzeglen.cqrs</groupId>
          <artifactId>fmz-cqrs-core</artifactId>
-         <version>${version.fmz-cqrs}</version>
+         <version>1.0.0</version>
       </dependency>
       <dependency>
          <groupId>com.filipmikolajzeglen.cqrs</groupId>
          <artifactId>fmz-cqrs-persistence</artifactId>
-         <version>${version.fmz-cqrs}</version>
+         <version>1.1.0</version>
       </dependency>
 
       <dependency>
