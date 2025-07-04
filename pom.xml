@@ -10,7 +10,7 @@
 
   <groupId>com.filipmikolajzeglen.cqrs</groupId>
   <artifactId>fmz-cqrs-micronaut</artifactId>
-  <version>1.0.3-SNAPSHOT</version>
+  <version>1.0.3-UNSTABLE</version>
 
   <name>FMZ - CQRS - Micronaut</name>
   <url>https://github.com/filipmikolajzeglen</url>
@@ -65,7 +65,7 @@
     <dependency>
       <groupId>com.filipmikolajzeglen.cqrs</groupId>
       <artifactId>fmz-cqrs-persistence</artifactId>
-      <version>1.2.0</version>
+      <version>1.3.0</version>
     </dependency>
 
     <dependency>
